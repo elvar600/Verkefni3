@@ -2,6 +2,7 @@
 #10.09.18
 #Verkefni3
 
+from sys import argv
 from bottle import*
 
 @route("/")
@@ -43,4 +44,5 @@ def villa(error):
     return "<h1 style = color:red>Þessi síða finnst ekki</h1>"
 
 
-run(host="localhost", port=8080, debug=True)
+#run(host="localhost", port=8080, debug=True)
+run(host='0.0.0.0', port=os.environ.get('PORT'))
